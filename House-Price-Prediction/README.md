@@ -1,36 +1,22 @@
-🏡 House Price Prediction — Machine Learning Project
-<p align="center"> <img src="https://i.imgur.com/sNCG9t5.png" width="70%" alt="House Price Prediction Banner"/> </p> <p align="center"> <b>Advanced Regression Techniques | Feature Engineering | Model Deployment</b> </p>
+🏡 House Price Prediction — AI/ML Project
+
+Welcome to the House Price Prediction project!
+This repository contains a complete end-to-end machine learning workflow designed to predict housing prices using advanced regression techniques. The project is powered by robust preprocessing, feature engineering, and state-of-the-art ML models.
+
+📊 About the Project
+
+This project focuses on building an accurate, data-driven model that estimates house prices based on numerous features.
+The dataset is sourced from the Kaggle competition:
+🔗 Kaggle Competition:
+https://www.kaggle.com/c/house-prices-advanced-regression-techniques
+
+🎯 Final Model Accuracy (R² Score): 87.16%
 🔥 Badges
 <p align="center"> <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python"/> <img src="https://img.shields.io/badge/Scikit--Learn-ML-yellow?logo=scikitlearn"/> <img src="https://img.shields.io/badge/XGBoost-Boosting-orange"/> <img src="https://img.shields.io/badge/GradientBoostingRegressor-Best%20Model-brightgreen"/> <img src="https://img.shields.io/badge/Kaggle-House%20Prices-blue?logo=kaggle"/> <img src="https://img.shields.io/badge/Status-Active-success"/> </p>
 
-📘 Project Overview
 
-This project builds a powerful machine learning model to predict house prices based on real estate features.
-We use the official Kaggle dataset:
 
-🔗 Kaggle Competition:
-https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
-🎯 Final Model Accuracy (R² Score): 87.16%
-
-📘 Project Overview
-
-This project builds a powerful machine learning model to predict house prices based on real estate features.
-We use the official Kaggle dataset:
-🔗 Kaggle Competition:
-https://www.kaggle.com/c/house-prices-advanced-regression-techniques
-
-🎯 Final Model Accuracy (R² Score): 87.16%
-
-📁 Project Structure
-
-├── house_price_prediction.ipynb   # Main ML workflow
-├── submission.csv                 # Kaggle-ready predictions
-├── gbr.pkl                        # Saved GradientBoosting model
-├── requirements.txt               # Project dependencies
-├── app.py                         # Flask API (optional)
-├── streamlit_app.py               # Streamlit UI (optional)
-└── README.md
 
 
 🧠 Key Features
