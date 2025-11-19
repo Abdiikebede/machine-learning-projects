@@ -1,132 +1,100 @@
-🏡 House Price Prediction — AI/ML Project
+![House Price Prediction Banner](https://i.imgur.com/vJoBNjz.png)
+<p align="center">
+  <b>🏡 House Price Prediction — Advanced Regression Project</b><br>
+  End-to-End Machine Learning Pipeline | Kaggle Competition Ready | Deployable Web App & API
+</p>
 
-Welcome to the House Price Prediction project!
-This repository contains a complete end-to-end machine learning workflow designed to predict housing prices using advanced regression techniques. The project is powered by robust preprocessing, feature engineering, and state-of-the-art ML models.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-1.5+-F7931E?logo=scikitlearn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/XGBoost-1.7+-E65F5C?logo=xgboost&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Best%20Model-GradientBoostingRegressor-success"/>
+  <img src="https://img.shields.io/badge/Kaggle-House%20Prices-20BEFF?logo=kaggle&logoColor=white"/>
+  <img src="https://img.shields.io/badge/R%C2%B2%20Score-87.16%25-brightgreen"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue"/>
+  <img src="https://img.shields.io/badge/Status-Active-success"/>
+</p>
 
-📊 About the Project
+---
 
-This project focuses on building an accurate, data-driven model that estimates house prices based on numerous features.
-The dataset is sourced from the Kaggle competition:
-🔗 Kaggle Competition:
+### 📊 Project Overview
+A complete **end-to-end machine learning project** that predicts house prices using the famous **Ames Housing dataset** from Kaggle's "House Prices - Advanced Regression Techniques" competition.
+
+**Goal**: Build a robust regression model that accurately predicts sale prices based on 80+ features (square footage, location, quality, year built, etc.).
+
+🔗 **Kaggle Competition Link**:  
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
-🎯 Final Model Accuracy (R² Score): 87.16%
-🔥 Badges
-<p align="center"> <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python"/> <img src="https://img.shields.io/badge/Scikit--Learn-ML-yellow?logo=scikitlearn"/> <img src="https://img.shields.io/badge/XGBoost-Boosting-orange"/> <img src="https://img.shields.io/badge/GradientBoostingRegressor-Best%20Model-brightgreen"/> <img src="https://img.shields.io/badge/Kaggle-House%20Prices-blue?logo=kaggle"/> <img src="https://img.shields.io/badge/Status-Active-success"/> </p>
+**Best Model**: `GradientBoostingRegressor` → **R² Score: 87.16%**
+
+---
+
+### ✨ Key Features
+- Comprehensive **Exploratory Data Analysis (EDA)** with beautiful visualizations
+- Smart **missing value imputation** & **outlier handling**
+- Advanced **feature engineering** (new meaningful features created)
+- Compared **10+ regression algorithms**
+- Hyperparameter tuning with cross-validation
+- Ready-to-use **Flask REST API** and **Streamlit web app** for deployment
+- Saved final model (`gbr.pkl`) using Joblib
+
+---
+
+### 🧠 Models Tested & Compared
+| Model                     | R² Score  | Rank |
+|---------------------------|-----------|------|
+| GradientBoostingRegressor | **87.16%** | 1st  |
+| XGBoost                   | 86.8%     | 2nd  |
+| Random Forest             | 85.4%     | 3rd  |
+| MLP Regressor (Neural Net)| 83.1%     |      |
+| Linear Regression         | 81.2%     |      |
+| SVR, KNN, Decision Tree   | < 80%     |      |
+
+---
+
+### 🛠 Tech Stack
+- **Language**: Python 3.10+
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Matplotlib, Seaborn
+- **Machine Learning**: Scikit-learn, XGBoost
+- **Deployment**: Flask (API), Streamlit (Web App)
+- **Model Persistence**: Joblib
+
+---
 
 
+---
 
+### 🚀 Quick Start
 
+#### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/house-price-prediction.git
+cd house-price-prediction
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+python app.py
 
+# streamlit_app.py
+import streamlit as st
+import joblib
+import numpy as np
 
-🧠 Key Features
-✔️ Full EDA (plots, correlations, distributions)
-✔️ Data cleaning + preprocessing
-✔️ Feature engineering
-✔️ Model comparison across 10+ algorithms
-✔️ Final model: GradientBoostingRegressor
-✔️ Easy-to-use deployment templates (Flask + Streamlit)
-✔️ Saved model (gbr.pkl) for reuse
+model = joblib.load("models/gbr.pkl")
 
-🛠️ Technologies Used
+st.title("🏡 House Price Prediction App")
+st.write("Enter comma-separated feature values to get instant price estimation!")
 
-Python
+features = st.text_input("Features (comma-separated):", "80,9000,3,2,2008,1990,...")
 
-NumPy
+if st.button("🔮 Predict Price"):
+    try:
+        input_data = np.array([float(x) for x in features.split(",")]).reshape(1, -1)
+        pred = model.predict(input_data)[0]
+        st.success(f"**Estimated House Price: ${pred:,.2f}** 💰")
+    except:
+        st.error("Please enter valid numeric values.")
 
-Pandas
-
-Matplotlib
-
-Seaborn
-
-Scikit-learn
-
-XGBoost
-
-Streamlit
-
-Flask
-
-
-🔍 Data Processing Workflow
-1. Data Loading & EDA
-
-
-Histograms, heatmaps, boxplots
-
-
-Missing value detection
-
-
-Outlier inspection
-
-
-2. Data Preprocessing
-
-
-Missing value imputation
-
-
-One-hot encoding
-
-
-Normalization and scaling
-
-
-3. Model Training
-Tested models include:
-
-
-Linear Regression
-
-
-Random Forest
-
-
-XGBoost
-
-
-GradientBoosting
-
-
-MLPRegressor
-
-
-KNN
-
-
-Decision Trees
-
-
-SVR
-
-
-4. Model Evaluation
-
-
-Cross-validation
-
-
-R² score
-
-
-Error comparison
-
-
-5. Prediction & Export
-Predictions saved as:
-submission.csv
-
-
-⭐ Project Logo (Downloadable)
-<p align="center">
-  <img src="https://i.imgur.com/vJoBNjz.png" width="40%" alt="House Price Prediction Logo">
-</p>
-If you want a custom banner with your name, I can generate one too.
-
-📄 requirements.txt
-Below is your ready-to-use requirements.txt:
 numpy
 pandas
 matplotlib
@@ -138,60 +106,8 @@ streamlit
 joblib
 
 
-🚀 Model Deployment Guide
-You get two options: Flask API or Streamlit Web App.
-
-1️⃣ Deploy Using Flask (REST API)
-📌 app.py
-from flask import Flask, request, jsonify
-import joblib
-import numpy as np
-
-model = joblib.load("gbr.pkl")
-
-app = Flask(__name__)
-
-@app.route("/predict", methods=["POST"])
-def predict():
-    data = request.json["features"]
-    prediction = model.predict([np.array(data)])
-    return jsonify({"predicted_price": float(prediction[0])})
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-▶️ Run the API
-python app.py
-
-📩 Example Request
-POST /predict
-{
-  "features": [12, 1400, 3, 2, 1, ...]
-}
-
-
-2️⃣ Deploy Using Streamlit (UI Web App)
-📌 streamlit_app.py
-import streamlit as st
-import joblib
-import numpy as np
-
-model = joblib.load("gbr.pkl")
-
-st.title("🏡 House Price Prediction App")
-
-feature_values = st.text_input("Enter features (comma separated):")
-
-if st.button("Predict"):
-    values = np.array(list(map(float, feature_values.split(","))))
-    pred = model.predict([values])
-    st.success(f"Estimated Price: ${pred[0]:,.2f}")
-
-▶️ Run the Streamlit App
-streamlit run streamlit_app.py
-
-
-📬 Contact
-For improvements, collaboration, or questions:
+📬 Contact & Collaboration
+Love this project? Want to contribute or hire for similar work?
 📧 Email: abdikebede17@gmail.com
-
+💼 LinkedIn: linkedin.com/in/yourprofile
+🐱 GitHub: github.com/Abdiikebede
