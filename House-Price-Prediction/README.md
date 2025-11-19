@@ -109,5 +109,5 @@ joblib
 📬 Contact & Collaboration
 Love this project? Want to contribute or hire for similar work?
 📧 Email: abdikebede17@gmail.com
-💼 LinkedIn: linkedin.com/in/yourprofile
+💼 LinkedIn: linkedin.com/in/abdiikebede
 🐱 GitHub: github.com/Abdiikebede
