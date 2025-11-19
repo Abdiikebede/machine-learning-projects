@@ -13,8 +13,17 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
 🎯 Final Model Accuracy (R² Score): 87.16%
 
+📘 Project Overview
+
+This project builds a powerful machine learning model to predict house prices based on real estate features.
+We use the official Kaggle dataset:
+🔗 Kaggle Competition:
+https://www.kaggle.com/c/house-prices-advanced-regression-techniques
+
+🎯 Final Model Accuracy (R² Score): 87.16%
+
 📁 Project Structure
-.
+
 ├── house_price_prediction.ipynb   # Main ML workflow
 ├── submission.csv                 # Kaggle-ready predictions
 ├── gbr.pkl                        # Saved GradientBoosting model
@@ -35,33 +44,23 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
 🛠️ Technologies Used
 
-
 Python
-
 
 NumPy
 
-
 Pandas
-
 
 Matplotlib
 
-
 Seaborn
-
 
 Scikit-learn
 
-
 XGBoost
-
 
 Streamlit
 
-
 Flask
-
 
 
 🔍 Data Processing Workflow
