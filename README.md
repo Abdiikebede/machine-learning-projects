@@ -73,7 +73,7 @@ Iris: Beautiful confusion matrix & plots
 
 
 Made By
-Your Name
+Abdi Kebede
 Machine Learning Engineer | Full-Stack ML Developer | Plagiarism Slayer
 GitHub: github.com/abdiikebede
 LinkedIn: linkedin.com/in/abdiikebede
